@@ -15,6 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.http import HttpResponse
+
+# Simple homepage view
+def home(request):
+    return HttpResponse("Welcome to the homepage!")
 
 urlpatterns = [
     path('demo/', include('demo.urls')),
