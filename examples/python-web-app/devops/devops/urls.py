@@ -19,4 +19,5 @@ from django.urls import include, path
 urlpatterns = [
     path('demo/', include('demo.urls')),
     path('admin/', admin.site.urls),
+    path('', home, name='home'),  # handles localhost:8000/
 ]
